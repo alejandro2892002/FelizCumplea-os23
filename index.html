@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👑 ¡Felices 23, Mi Compañera de Aventuras!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    
+    <header class="hero-section">
+        <h1>¡Felices 23 Años, Mi Reina!</h1>
+        <p>Sin duda alguna la mejor mujer del mundo, irradias una elegancia y amor unico.</p>
+    </header>
+
+    <main>
+        <section id="poema-generator" class="seccion-interactiva">
+            <h2>📜 La Cámara de la Poesía Perfecta</h2>
+            <p>Un verso de amor, digno de la realeza. Presiona, y descubre mi amor por ti dulce belleza.</p>
+            <button id="generar-poema-btn">Revelar Estrofa de Amor</button>
+            <div id="poema-output" class="output-box"></div>
+        </section>
+        
+        <hr>
+
+        <section id="aventura-generator" class="seccion-interactiva">
+            <h2>🗺️ Diario de Próximas Aventuras Encantadoras</h2>
+            <p>Descubre el plan: ¿viaje elegante, cena de película o exploración de castillo?</p>
+            <button id="generar-aventura-btn">¿Cuál es el Plan Real?</button>
+            <div id="aventura-output" class="output-box"></div>
+        </section>
+
+        <hr>
+
+        <section id="juego-corazones" class="seccion-juego">
+            <h2>💖 El Reto del Amor: Atrapa el Corazón Caído</h2>
+            <p>Usa las flechas ← → (o desliza en móvil) para mover a Stitch. ¡No dejes que se caigan nuestros momentos!</p>
+            <div class="game-controles">
+                <button id="music-toggle-btn">🎶 Música ON/OFF</button>
+            </div>
+            <div id="juego-area">
+                <div id="game-message" class="hidden"></div> 
+                <div id="catcher"></div> 
+            </div>
+            <div id="puntuacion">Corazones Atrapados: 0 | Vidas: 3</div>
+            <button id="start-game-btn">Jugar / Reiniciar</button>
+        </section>
+
+        <hr>
+
+        <section id="carrusel-musica" class="seccion-musica">
+            <h2>🎶 Melodías que te encantan</h2>
+            <p>Tus canciones favoritas. Usa los botones para cambiar de video.</p>
+            <div class="carrusel-contenedor">
+                <iframe id="youtube-player" width="100%" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="carrusel-controles">
+                <button id="prev-btn">◀ Anterior</button>
+                <button id="next-btn">Siguiente ▶</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Hecho con todo mi amor para la cumpleañera más elegante, perfecta, bondadosa y hermosa de este universo.</p>
+    </footer>
+
+    <audio id="button-click-sound" src="campana.mp3" preload="auto"></audio>
+    <audio id="game-music" src="cancion3.mp3" loop preload="auto"></audio>
+
+    <script src="script.js"></script> 
+</body>
+</html>

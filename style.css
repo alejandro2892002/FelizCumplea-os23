@@ -1,0 +1,159 @@
+/* -------------------- ESTILOS GENERALES Y FUENTES -------------------- */
+:root {
+    --color-fondo: #1a1a2e; /* Púrpura muy oscuro, elegante */
+    --color-primario: #e3c457; /* Dorado Hércules/Realeza */
+    --color-secundario: #4e4a68; /* Púrpura suave */
+    --color-texto: #fefefe; /* Blanco suave */
+    --color-acento: #33d9b2; /* Verde-Azul Coraline/Stitch */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--color-primario);
+    margin-bottom: 10px;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--color-primario), rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}
+
+/* -------------------- ENCABEZADO Y PIE DE PÁGINA -------------------- */
+.hero-section {
+    background: linear-gradient(135deg, var(--color-fondo) 0%, var(--color-secundario) 100%);
+    padding: 60px 20px;
+    border-bottom: 5px solid var(--color-primario);
+}
+
+footer {
+    padding: 20px;
+    background-color: var(--color-secundario);
+    margin-top: 40px;
+    border-top: 2px solid var(--color-primario);
+}
+
+/* -------------------- BOTONES Y SECCIONES -------------------- */
+section {
+    background-color: var(--color-secundario);
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+button {
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #ffd700; 
+    transform: scale(1.02);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.output-box {
+    min-height: 50px;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #38364b;
+    border-radius: 8px;
+    border-left: 5px solid var(--color-acento);
+    font-style: italic;
+    color: var(--color-texto);
+}
+
+/* -------------------- SECCIÓN DEL JUEGO -------------------- */
+#juego-area {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: 20px auto;
+    border: 3px solid var(--color-acento); 
+    background-color: #28283a;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#catcher {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 40px); /* Centrado inicial */
+    /* Placeholder para Stitch: usa un azul Stitch o cambia la imagen */
+    background-color: transparent; 
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234A90E2"><circle cx="12" cy="12" r="10"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-3-3h2V9h2v5h2l-3 3z"/></svg>');
+    background-size: cover;
+    transition: left 0.05s linear; /* Movimiento suave */
+    z-index: 10;
+}
+
+.falling-heart {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -30px; 
+    /* Corazón Dorado (Aladdin/Hércules) */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23e3c457"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+    background-size: cover;
+}
+
+#game-message {
+    font-size: 2em;
+    color: var(--color-primario);
+    background-color: rgba(0, 0, 0, 0.9); /* Más oscuro para el pop-up */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px; /* Un poco más grande */
+    border-radius: 10px;
+    border: 5px solid var(--color-primario); /* Borde más grueso */
+    z-index: 20;
+    width: 80%;
+    box-shadow: 0 0 20px rgba(227, 196, 87, 0.8); /* Brillo dorado */
+}
+.hidden {
+    display: none;
+}
